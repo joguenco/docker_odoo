@@ -1,18 +1,28 @@
 <templates xml:space="preserve">
   <t t-name="owl.OwlVersionDashboard" owl="1">
-    <div class="container-fluid p-3">
-      <div class="card mt-3">
-        
-        <div class="card-header">
-          <h2 t-esc="state.title"/>
-        </div>
-        
-        <div class="card-body">
-          <p>Print version of Odoo Platform</p> 
-        </div>
+        <div class="container-fluid p-3">
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h2 t-esc="state.title" />
+                </div>
 
-      </div>
-    </div>
-  </t>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Odoo: <spam
+                            t-out="state.version.versionOdoo"
+                        /></li>
+                        <li class="list-group-item">Database: <spam
+                            t-out="state.version.versionDatabase"
+                        /></li>
+                        <li class="list-group-item">Python: <spam
+                            t-out="state.version.versionPython"
+                        /></li>
+                        <li class="list-group-item">OS: <spam
+                            t-out="state.version.versionOS"
+                        /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </t>
 </templates>
-

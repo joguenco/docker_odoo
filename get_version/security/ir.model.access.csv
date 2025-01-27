@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_get_version_get_version,get_version.get_version,model_get_version_get_version,base.group_user,1,1,1,1
+get_version.access_version_version,access_version_version,get_version.model_version_version,base.group_user,1,1,1,1
