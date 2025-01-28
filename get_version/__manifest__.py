@@ -9,6 +9,7 @@
     "depends": ["base", "web"],
     "data": [
         "security/ir.model.access.csv",
+        "data/version.xml",
         "views/version_dashboard.xml",
     ],
     "installable": True,
