@@ -1,0 +1,28 @@
+# fly.toml app configuration file generated for odoo-wandering-voice-1709 on 2025-01-29T08:05:26-05:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'odoo'
+primary_region = 'mia'
+
+[build]
+
+[env]
+  DATABASE = 'odoo'
+  HOST = 'odoodb.flycast'
+  PASSWORD = 'N0PiratearXfavor'
+  PORT = '5432'
+  USER = 'odoo'
+
+[http_service]
+  internal_port = 8069
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  size = 'shared-cpu-1x'
+  memory = '1gb'

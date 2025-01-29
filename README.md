@@ -1,1 +1,6 @@
 ## Odoo 18.0 with docker
+
+CREATE ROLE odoo WITH LOGIN NOSUPERUSER CREATEDB NOCREATEROLE INHERIT NOREPLICATION CONNECTION LIMIT -1 PASSWORD 'N0PiratearXfavor';
+
+
+fly logs --app odoo-wandering-voice-1709
