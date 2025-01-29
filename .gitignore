@@ -87,4 +87,4 @@ docs/_build/
 # OCA rules
 !static/lib/
 
-.github/fly-deploy.yml
+.github/workflows/fly-deploy.yml
