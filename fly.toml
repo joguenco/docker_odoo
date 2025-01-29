@@ -1,16 +1,16 @@
-# fly.toml app configuration file generated for odoo-wandering-voice-1709 on 2025-01-29T08:05:26-05:00
+# fly.toml app configuration file generated for odoo-hello on 2025-01-29T11:49:02-05:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'odoo'
+app = 'odoo-hello'
 primary_region = 'mia'
 
 [build]
 
 [env]
   DATABASE = 'odoo'
-  HOST = 'odoodb.flycast'
+  HOST = 'odoo-hello-db.flycast'
   PASSWORD = 'N0PiratearXfavor'
   PORT = '5432'
   USER = 'odoo'
