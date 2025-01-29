@@ -1,0 +1,21 @@
+services:
+  odoo18:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: odoohola
+    restart: always         
+    image: odoo:18.0
+    network_mode: bridge
+    ports:
+      - "8069:8069"
+      - "8071:8071" 
+      - "8072:8072" # live chat
+    command: --
+    environment:
+      - HOST=host.docker.internal
+      - USER=hello
+      - PASSWORD=h
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    
