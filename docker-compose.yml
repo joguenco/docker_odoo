@@ -19,8 +19,8 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
-      - odoo-web-data:/var/lib/odoo
+      # - odoo-web-data:/var/lib/odoo
       # - ./config:/etc/odoo
-      - ./addons:/mnt/extra-addons
-volumes:
-  odoo-web-data:    
+      - /app/odoo/addons:/mnt/extra-addons
+# volumes:
+#   odoo-web-data:    
