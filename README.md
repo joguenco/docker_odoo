@@ -1,16 +1,13 @@
-## Odoo 18.0 with docker
+# Odoo 18.0 with docker
 
-### Create database
-```
-fly postgres create
-```
-### Connect to database
-```
-fly postgres connect -a odoo-hello-db
-```
+Docker files for Odoo
+
 ### Create user
 ```
-CREATE ROLE odoo WITH LOGIN NOSUPERUSER CREATEDB NOCREATEROLE INHERIT NOREPLICATION CONNECTION LIMIT -1 PASSWORD 'N0PiratearXfavor';
+CREATE ROLE hello WITH LOGIN NOSUPERUSER CREATEDB NOCREATEROLE INHERIT NOREPLICATION CONNECTION LIMIT -1 PASSWORD 'h';
 ```
 
-fly logs --app odoo-hello
+## Run
+```
+ docker-compose up
+```

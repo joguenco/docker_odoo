@@ -1,9 +1,9 @@
 services:
-  odoo18:
+  hello_odoo:
     build:
       context: ./
       dockerfile: Dockerfile
-    container_name: odoohola
+    container_name: hello_odoo
     restart: always         
     image: odoo:18.0
     network_mode: bridge
@@ -18,4 +18,9 @@ services:
       - PASSWORD=h
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    
+    volumes:
+      - odoo-web-data:/var/lib/odoo
+      # - ./config:/etc/odoo
+      - ./addons:/mnt/extra-addons
+volumes:
+  odoo-web-data:    
